@@ -48,3 +48,11 @@ vim.keymap.set("t", "<A-j>", "<C-\\><C-n><C-w>j", opts)
 vim.keymap.set("t", "<A-k>", "<C-\\><C-n><C-w>k", opts)
 vim.keymap.set("t", "<A-k>", "<C-\\><C-n><C-w>k", opts)
 vim.keymap.set("t", "<A-l>", "<C-\\><C-n><C-w>l", opts)
+
+-- unbind <c-l> in terminal
+vim.api.nvim_create_autocmd("TermOpen", {
+  pattern = "*",
+  callback = function()
+    vim.api.nvim_buf_set_keymap(0, "t", "<C-l>", "<C-l>", { noremap = true, silent = true })
+  end,
+})
