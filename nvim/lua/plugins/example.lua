@@ -194,4 +194,9 @@ return {
       },
     },
   },
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = { "LazyGit", "LazyGitConfig", "LazyGitCurrentFile" },
+    keys = { { "lg", "<cmd>LazyGit<cr>", desc = "LazyGit" } },
+  },
 }
