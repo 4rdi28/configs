@@ -1,6 +1,5 @@
 #!/bin/bash
 
-git clone https://github.com/4rdi28/configs.git
+git pull
 mkdir -p ~/.config/nvim
-cp -r configs/nvim ~/.config/
-
+cp -r nvim ~/.config/
